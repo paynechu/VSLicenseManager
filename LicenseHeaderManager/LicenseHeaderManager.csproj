@@ -121,11 +121,14 @@
     <Compile Include="Headers\LicenseHeader.cs" />
     <Compile Include="Headers\ParseException.cs" />
     <Compile Include="Headers\Parser.cs" />
-    <Compile Include="Options\ExtensionConverter.cs" />
+    <Compile Include="Options\ChainedCommand.cs" />
+    <Compile Include="Options\Converters\ChainedCommandConverter.cs" />
+    <Compile Include="Options\Converters\ExtensionConverter.cs" />
+    <Compile Include="Options\Converters\XmlTypeConverter.cs" />
     <Compile Include="Options\WpfLanguageDialog.xaml.cs">
       <DependentUpon>WpfLanguageDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Options\LanguagesConverter.cs" />
+    <Compile Include="Options\Converters\LanguagesConverter.cs" />
     <Compile Include="Options\OptionsPage.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -155,6 +158,9 @@
     </Compile>
     <Compile Include="Options\WpfHost.Designer.cs">
       <DependentUpon>WpfHost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options\WpfCommandDialog.xaml.cs">
+      <DependentUpon>WpfCommandDialog.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -201,6 +207,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Options\WpfOptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Options\WpfCommandDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
